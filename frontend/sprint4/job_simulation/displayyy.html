@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    button{
+        background-color: rgb(35, 80, 148);
+        color: white;
+        font-weight: bold;
+        width: 100px;
+        height: 30px;
+    }
+
+    .container { width: 50%; margin: auto; padding: 20px; border: 1px solid #d6c9c9; border-radius: 8px; height: 300px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+</style>
+<body style="text-align: center;">
+    <div class="container">
+    <h1>USER DETAILS</h1>
+    <h3 id="name_data"></h3>
+    <h3 id="email_data"></h3>
+        <h3 id="phone_data"></h3>
+
+    <button onclick="cleardata()"> Clear Data</button>
+
+</div>
+</body>
+
+
+<script>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    let userData=localStorage.getItem('userData');
+    if (userData){
+        let user=JSON.parse(userData);
+        document.getElementById('name_data').innerHTML='Name:'+user.name;
+        document.getElementById('email_data').innerHTML='Email:'+ user.email;
+        document.getElementById('phone_data').innerHTML='Phone No:'+user.phone;
+
+    }
+    else{
+        document.body.innerHTML='user data not found';
+    }
+
+   
+});
+function cleardata(){
+        localStorage.removeItem("userData");
+        window.location.href = "indexxx.html"; 
+    }
+</script>
+</html>

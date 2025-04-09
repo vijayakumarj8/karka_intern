@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>select your choices</h2>
+    <span>Select Gender:</span> <br><br>
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female
+
+    <input type="radio" name="gender" value="Other">others <br><br>
+
+
+    <span>Select Hobbies:</span> <br><br>
+    <input type="checkbox" name="hobby" value="Reading">Reading
+    <input type="checkbox" name="hobby" value="Writing">Writing
+    <input type="checkbox" name="hobby" value="Singing">Singing <br><br>
+ <button onclick="ans()">Get Selected values</button>
+ 
+ <p id="para"></p>
+
+
+
+
+
+ <script>
+
+  function ans(){
+      let selectedradio= document.querySelector('input[name="gender"]:checked');
+      let selectedvalue='none';
+      if (selectedradio){
+        selectedvalue=selectedradio.value;
+      }
+
+
+
+      let seleted_checkbox=document.querySelectorAll ('input[name="hobby"]:checked');
+      let checkbox_arr=[];
+      for( let i=0;i<seleted_checkbox.length;i++)
+      {
+        checkbox_arr.push(seleted_checkbox[i].value)
+
+      }
+
+      let hobbies;
+      if (checkbox_arr.length>0){
+        hobbies = checkbox_arr.join(", ");
+
+      }
+      else{
+        hobbies='none'
+      }
+
+      document.getElementById('para').innerHTML='<b> gender:</b>'+ selectedvalue + " <br> <br> <b> hobbies:</b>"+ hobbies
+      
+
+   
+}
+
+
+
+  
+
+
+
+
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para1"> I am Parthiban</p>
+    <p class="cc"> Hello </p>
+    <p class="cc"> Welcome </p>
+    <p class="cc"> Good Morning </p>
+    <p class="cc"> How are u </p>
+    <p class="cc"> Bye </p>
+    <style>
+        .cc
+        {
+            color:green;
+            border:1px solid black;
+        }
+    </style>
+
+    <script>
+        document.getElementById("para1").innerHTML="I am Leo das";
+        document.querySelector(".cc").style.color="blue";
+        document.querySelectorAll(".cc").forEach(onebyone=>
+        {
+            onebyone.style.color="blue";
+        });
+    </script>
+
+</body>
+</html>

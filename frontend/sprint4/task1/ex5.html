@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>onchange</title>
+    <script>
+        function showValue() {
+            let inputValue = document.getElementById("myInput").value;
+            document.getElementById("output").innerText = "Input Changed:" + inputValue;
+        }
+    </script>
+</head>
+<body>
+
+    <input type="text" id="myInput" onchange="showValue()">
+    <p id="output"></p>
+
+</body>
+</html>
