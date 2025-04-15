@@ -3,35 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
     <title>Document</title>
 </head>
 <style>
-    .error { color: red; font-size: 12px; }
+    .error{ color: red; font-size: 12px; }
 </style>
 
 <body>
-    <div id="maindiv" style="text-align: center;">
+    <div id="maindiv"style="text-align:center;">
         <h1> FILL THE FORM</h1><br>
 
         <form action="" id="userForm">
-        <input type="text" class="input-field" placeholder="enter your name" name="" id="name" style="width: 300px; height: 30px;" required>
+        <input type="text" class="input-field"placeholder="enter your name"name=""id="name"style="width:300px;height:30px;"required>
         <p id="nameerror" class="error"></p>
 
 
-        <input type="email" class="input-field" placeholder="enter your email" name="" id="email" style="width: 300px; height: 30px;"
+        <input type="email"class="input-field"placeholder="enter your email"name=""id="email"style="width:300px;height:30px;"
             required>
-        <p id="emailerror" class="error"></p>
+        <p id="emailerror"class="error"></p>
 
 
-        <input type="tel" class="input-field" placeholder="enter your phone number" id="phone" style="width: 300px; height: 30px; "
+        <input type="tel"class="input-field" placeholder="enter your phone number" id="phone" style="width: 300px;height:30px;"
             required>
-        <p id="phoneerror" class="error"></p>
+        <p id="phoneerror"class="error"></p>
 
 
 
         <button type="submit"
-            style="background-color: rgb(69, 69, 156); color: white;border-radius: 0%;width: 80px;height: 30px;font-weight: bold;">submit</button>
+            style="background-color:rgb(69, 69, 156);color:white;border-radius:0%;width:80px;height:30px;font-weight:bold;">submit</button>
 
         </form>
 
@@ -42,7 +42,7 @@
     
 
 
-        document.getElementById("userForm").addEventListener("submit", function(event) {
+        document.getElementById("userForm").addEventListener("submit",function(event) {
             event.preventDefault();
 
             let name=document.getElementById('name').value.trim();
@@ -84,7 +84,7 @@
             }
 
             if (isvalid){
-                let userData={ name, email, phone};
+                let userData={name,email,phone};
                 localStorage.setItem("userData",JSON.stringify(userData));  
                 window.location.href = "displayyy.html";  
             }
